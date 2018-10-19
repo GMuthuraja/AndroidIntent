@@ -4,15 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_centerInParent="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:onClick="openCamera"
+        android:text="Open Camera"
+        app:layout_constraintRight_toRightOf="@id/gallery"
+        app:layout_constraintBottom_toTopOf="@id/gallery" />
+
+    <Button
+        android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openGallery"
+        android:text="Open Gallery"
+        app:layout_constraintRight_toRightOf="@id/logs"
+        app:layout_constraintBottom_toTopOf="@id/logs" />
+
+    <Button
+        android:id="@+id/logs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openCallLog"
+        android:text="Open Logs"
+        app:layout_constraintRight_toRightOf="@id/contacts"
+        app:layout_constraintBottom_toTopOf="@id/contacts" />
+
+    <Button
+        android:id="@+id/contacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openContacts"
+        android:text="Open Contacts"
+        app:layout_constraintRight_toRightOf="@id/browser"
+        app:layout_constraintBottom_toTopOf="@id/browser" />
+
+    <Button
+        android:id="@+id/browser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open Browser"
+        android:onClick="openBrowser"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/gmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openGmail"
+        android:text="Send Mail"
+        app:layout_constraintRight_toRightOf="@id/browser"
+        app:layout_constraintTop_toBottomOf="@id/browser" />
+
+    <Button
+        android:id="@+id/dialer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openDialScreen"
+        android:text="Open Dialup"
+        app:layout_constraintRight_toRightOf="@id/gmail"
+        app:layout_constraintTop_toBottomOf="@id/gmail" />
+
+    <Button
+        android:id="@+id/nextActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goNextActivity"
+        android:text="Next Activity"
+        app:layout_constraintRight_toRightOf="@id/dialer"
+        app:layout_constraintTop_toBottomOf="@id/dialer" />
+
+    <Button
+        android:id="@+id/nextActivityPararm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goNextActivityParams"
+        android:text="Next Activity With Params"
+        app:layout_constraintRight_toRightOf="@id/nextActivity"
+        app:layout_constraintTop_toBottomOf="@id/nextActivity" />
+
 
 </android.support.constraint.ConstraintLayout>
